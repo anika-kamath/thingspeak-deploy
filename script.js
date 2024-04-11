@@ -1,10 +1,11 @@
-setInterval(function() {
-    fetch('/data')
-        .then(response => response.text())
-        .then(data => {
-            const values = JSON.parse(data);
-            document.getElementById('temperature').textContent = `Temperature: ${values.temperature}°C`;
-            document.getElementById('humidity').textContent = `Humidity: ${values.humidity}%`;
-        })
-        .catch(error => console.error(error));
-}, 5000); // Update every 5 seconds
+const sensorDataDiv = document.getElementById('sensor-data');
+
+fetch('/data')
+    .then(response => response.json())
+    .then(data => {
+        sensorDataDiv.innerHTML = `
+            <h2>Temperature: ${data.temperature}°C</h2>
+            <h2>Humidity: ${data.humidity}%</h2>
+        `;
+    })
+    .catch(error => console.error(error));

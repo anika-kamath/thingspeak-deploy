@@ -19,7 +19,7 @@
 /* Style the container within the home section */
 .home__container {
   display: flex; /* Make the container a flexbox as well */
-  flex-direction: column; /* Stack elements vertically */
+  flex-direction: row; /* Stack elements vertically */
   width: 80%; /* Set a maximum width for the container */
   text-align: center; /* Center text content within the container */
 }

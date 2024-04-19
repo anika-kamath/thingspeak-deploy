@@ -1,54 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /*=============== HOME ===============*/
-/* Target the home section */
-.home {
-  display: flex;
-  align-items: center;
+.home{
+  padding: 3.5rem 0 2rem;
 }
 
-/* Style the container within the home section */
-.home__container {
-  display: flex; /* Make the container a flexbox as well */
-  flex-direction: row; /* Set the flex direction to row (default) */
+.home__container{
+  position: relative;
+  row-gap: 2rem;
 }
 
-/* Style the image */
-.home__img {
-  width: 50%;
-  object-fit: cover;
-  order: -1;
+.home__img{
+  width: 200px;
+  justify-self: center;
 }
 
-/* Style the data container */
-.home__data {
-  flex: 1; /* Allow the data container to grow and fill remaining space */
-  text-align: justify;
-  padding: 2rem;
-  color: #333;
-}
-
-/* Style the title with dark green color */
-.home__title {
-  font-size: 2rem;
+.home__title{
+  font-size: var(--big-font-size);
+  line-height: 140%;
   margin-bottom: 1rem;
-  color: darkgreen;
 }
 
-/* Style the description with bold text */
-.home__description {
-  font-weight: bold;
+.home__description{
+  margin-bottom: 2.5rem;
 }
 
-/* Media query for smaller screens (adjust breakpoint as needed) */
-@media (max-width: 768px) {
-  .home__img {
-    width: 100%;
-    order: initial;
-  }
-  .home__data {
-    text-align: center;
-  }
+.home__social{
+  position: absolute;
+  top: 2rem;
+  right: -1rem;
+  display: grid;
+  justify-items: center;
+  row-gap: 3.5rem;
 }
 
 

@@ -1,15 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/*=============== HOME ===============*/
 /* Style the home section */
 #home {
-  display: flex; /* Make the home section a flexbox for flexible layout */
-  justify-content: center; /* Center the content horizontally within the viewport */
-  align-items: center; /* Align content vertically within the section */
-  min-height: 100vh; /* Set a minimum height for the section to fill the viewport */
-}
-
-.home {
   display: flex; /* Make the home section a flexbox for flexible layout */
   justify-content: center; /* Center the content horizontally within the viewport */
   align-items: center; /* Align content vertically within the section */
@@ -19,21 +11,22 @@
 /* Style the container within the home section */
 .home__container {
   display: flex; /* Make the container a flexbox as well */
-  flex-direction: row; /* Stack elements vertically */
+  flex-direction: row; /* Arrange elements horizontally (image on left, text on right) */
   width: 80%; /* Set a maximum width for the container */
-  text-align: center; /* Center text content within the container */
+  text-align: center; /* Center text content within the container (optional) */
 }
 
 /* Style the image */
 .home__img {
-  width: 100%; /* Set the image to full width of the container */
+  width: 50%; /* Set the image to half the container width */
   object-fit: cover; /* Ensure image fills the space while maintaining aspect ratio */
-  margin: 0 auto; /* Center the image horizontally within the container */
+  margin: 0 auto; /* Center the image horizontally within the container (optional) */
   border-radius: 10px; /* Add a slight border radius for a softer look (optional) */
 }
 
 /* Style the data container */
 .home__data {
+  flex: 1; /* Allow the data container to grow and fill remaining space */
   padding: 2rem; /* Add some padding for spacing */
   color: #333; /* Set default text color to dark gray */
 }
@@ -53,12 +46,13 @@
 /* Media query for smaller screens (adjust breakpoint as needed) */
 @media (max-width: 768px) {
   .home__container {
-    flex-direction: column; /* Maintain column layout on small screens */
+    flex-direction: column; /* Stack elements vertically on small screens */
   }
   .home__img {
     width: 100%; /* Maintain full width image on small screens */
   }
 }
+
 
 
 /*-body-*/

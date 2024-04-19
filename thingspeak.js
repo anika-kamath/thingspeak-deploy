@@ -1,6 +1,6 @@
 function getData() {
   const channelId = "YOUR_CHANNEL_ID"; // Replace with your ThingSpeak channel ID
-  const apiReadKey = "YOUR_READ_API_KEY"; // Replace with your ThingSpeak Read API Key
+  const apiReadKey = "24ZW1FNGPT26S71C"; // Replace with your ThingSpeak Read API Key
   const url = `https://api.thingspeak.com/channels/${channelId}/fields/1/last.json?api_key=${apiReadKey}`;
 
   fetch(url)

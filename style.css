@@ -32,6 +32,10 @@
 }
 
 .home__description{
+  line-height: 140%;
+  font-size: 30px;
+  margin-right: 2rem;
+  text-align: right;
   margin-bottom: 2.5rem;
 }
 

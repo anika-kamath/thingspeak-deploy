@@ -33,3 +33,12 @@ h1, h2 {
 #sensor-data {
     text-align: center;
 }
+
+.iframe-container {
+  display: flex; /* Make the container a flexbox */
+  flex-wrap: nowrap; /* Prevent wrapping of iframes */
+}
+
+.iframe-container iframe {
+  margin: 10px; /* Add spacing between iframes */
+}

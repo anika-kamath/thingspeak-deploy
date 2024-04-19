@@ -22,12 +22,15 @@
 
     <section id="sensor-data" class="section">
       <h1>Sensor Data</h1>
-      <div id="sensor-data-content">
-        <p>Loading data...</p>
-      </div>
-      <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2191567/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Temperature&type=line"></iframe>
+      <div id="sensor-data-content" class="iframe-container">
+         <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2191567/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Temperature&type=line"></iframe>
+        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2191567/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Humidity&type=line"></iframe>
+        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2191567/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
     </section>
 
+        
+      </div>
+     
     <section id="model" class="section">
       <h1>Machine Learning Model</h1>
       <p>This page will display the Machine Learning Model interface. 

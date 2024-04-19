@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Environment Monitoring</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Environment Monitoring</title>
+  <link rel="stylesheet" href="style.css"> <script src="thingspeak.js"></script> </head>
 <body>
-    <header>
-        <h1>Environment Monitoring</h1>
-        <nav>
-            <a href="#home" class="active">Home</a>
-            <a href="#sensor-data">Sensor Data</a>
-            <a href="#model">Machine Learning Model</a>
-        </nav>
-    </header>
+  <header>
+    <h1>Environment Monitoring</h1>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#sensor-data">Sensor Data</a>
+      <a href="#model">Machine Learning Model</a>
+    </nav>
+  </header>
 
-    <main>
-        <section id="home" class="section">
-            <p>Welcome to the environment monitoring system! This system allows you to view sensor data and interact with a machine learning model.</p>
-        </section>
+  <main>
+    <section id="home" class="section">
+      <p>Welcome to the environment monitoring system! This system allows you to view sensor data and interact with a machine learning model.</p>
+    </section>
 
-        <section id="sensor-data" class="section">
-            <h1>Sensor Data</h1>
-            <div id="sensor-data-content">
-                <p>Loading data...</p>
-            </div>
-        </section>
+    <section id="sensor-data" class="section">
+      <h1>Sensor Data</h1>
+      <div id="sensor-data-content">
+        <p>Loading data...</p>
+      </div>
+    </section>
 
-        <section id="model" class="section">
-            <h1>Machine Learning Model</h1>
-            <p>This page will display the Machine Learning Model interface. 
-               For this example, it's linked to a Streamlit app. 
-               **Note:** Requires separate deployment of your Streamlit model.</p>
-            <iframe src="http://[YOUR_STREAMLIT_APP_URL]" width="100%" height="600px"></iframe>
-        </section>
-    </main>
+    <section id="model" class="section">
+      <h1>Machine Learning Model</h1>
+      <p>This page will display the Machine Learning Model interface. 
+        For this example, it's linked to a Streamlit app. 
+        **Note:** Requires separate deployment of your Streamlit model.</p>
+      <iframe src="http://[YOUR_STREAMLIT_APP_URL]" width="100%" height="600px"></iframe>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
+  <script>
+    getData(); // Call the function to retrieve sensor data
+  </script>
 </body>
 </html>

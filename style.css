@@ -12,23 +12,23 @@
 /* Style the container within the home section */
 .home__container {
   display: flex; /* Make the container a flexbox as well */
-  flex-direction: row; /* Set the flex direction to row (image on left, text on right) */
+  flex-direction: column; /* Stack elements vertically */
   width: 80%; /* Set a maximum width for the container */
+  text-align: center; /* Center text content within the container */
 }
 
 /* Style the image */
 .home__img {
-  width: 100%; /* Set the image width to 50% of the container */
+  width: 100%; /* Set the image to full width of the container */
   object-fit: cover; /* Ensure image fills the space while maintaining aspect ratio */
-  margin: 0 auto;
+  margin: 0 auto; /* Center the image horizontally within the container */
+  border-radius: 10px; /* Add a slight border radius for a softer look (optional) */
 }
 
 /* Style the data container */
 .home__data {
-  flex: 1; /* Allow the data container to grow and fill remaining space */
   padding: 2rem; /* Add some padding for spacing */
   color: #333; /* Set default text color to dark gray */
-  text-align: justify; /* Justify text alignment for better readability */
 }
 
 /* Style the title with dark green color */
@@ -45,17 +45,11 @@
 
 /* Media query for smaller screens (adjust breakpoint as needed) */
 @media (max-width: 768px) {
-  #home {
-    flex-direction: column; /* Stack elements vertically on small screens */
-  }
   .home__container {
-    flex-direction: column; /* Image on top, text below on small screens */
+    flex-direction: column; /* Maintain column layout on small screens */
   }
   .home__img {
-    width: 100%; /* Make image full width on smaller screens */
-  }
-  .home__data {
-    text-align: center; /* Center text on smaller screens */
+    width: 100%; /* Maintain full width image on small screens */
   }
 }
 

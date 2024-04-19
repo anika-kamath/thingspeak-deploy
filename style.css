@@ -1,53 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /*=============== HOME ===============*/
-.home{
-  padding: 3.5rem 0 2rem;
+/* Style the home section */
+#home {
+  display: flex; /* Make the home section a flexbox for flexible layout */
+  justify-content: center; /* Center the content horizontally within the viewport */
+  align-items: center; /* Align content vertically within the section */
+  min-height: 100vh; /* Set a minimum height for the section to fill the viewport */
 }
 
-.home__container{
-  position: relative;
-  row-gap: 600px;
+/* Style the container within the home section */
+.home__container {
+  display: flex; /* Make the container a flexbox as well */
+  flex-direction: row; /* Set the flex direction to row (image on left, text on right) */
+  width: 80%; /* Set a maximum width for the container */
 }
 
-.home__img{
-  width: 200px;
-  justify-self: center;
+/* Style the image */
+.home__img {
+  width: 50%; /* Set the image width to 50% of the container */
+  object-fit: cover; /* Ensure image fills the space while maintaining aspect ratio */
 }
 
-.home__data{
-  line-height: 140%;
-  margin-bottom: 1rem;
-  font-size: 30px;
-  margin-right: 2rem;
-  text-align: right;
+/* Style the data container */
+.home__data {
+  flex: 1; /* Allow the data container to grow and fill remaining space */
+  padding: 2rem; /* Add some padding for spacing */
+  color: #333; /* Set default text color to dark gray */
+  text-align: justify; /* Justify text alignment for better readability */
 }
 
-.home__title{
-  line-height: 140%;
-  margin-bottom: 1rem;
-  font-size: 30px;
-  margin-right: 2rem;
-  text-align: right;
+/* Style the title with dark green color */
+.home__title {
+  font-size: 2rem; /* Increase font size for title */
+  margin-bottom: 1rem; /* Add some space below the title */
+  color: darkgreen;
 }
 
-.home__description{
-  line-height: 140%;
-  font-size: 30px;
-  margin-right: 2rem;
-  text-align: right;
-  margin-bottom: 2.5rem;
+/* Style the description with bold text */
+.home__description {
+  font-weight: bold; /* Make description text bold */
 }
 
-.home__social{
-  position: absolute;
-  top: 2rem;
-  right: -1rem;
-  display: grid;
-  justify-items: center;
-  row-gap: 3.5rem;
+/* Media query for smaller screens (adjust breakpoint as needed) */
+@media (max-width: 768px) {
+  #home {
+    flex-direction: column; /* Stack elements vertically on small screens */
+  }
+  .home__container {
+    flex-direction: column; /* Image on top, text below on small screens */
+  }
+  .home__img {
+    width: 100%; /* Make image full width on smaller screens */
+  }
+  .home__data {
+    text-align: center; /* Center text on smaller screens */
+  }
 }
-
 
 
 /*-body-*/

@@ -18,8 +18,9 @@
 
 /* Style the image */
 .home__img {
-  width: 50%; /* Set the image width to 50% of the container */
+  width: 100%; /* Set the image width to 50% of the container */
   object-fit: cover; /* Ensure image fills the space while maintaining aspect ratio */
+  margin: 0 auto;
 }
 
 /* Style the data container */

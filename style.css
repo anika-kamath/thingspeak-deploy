@@ -15,6 +15,14 @@
   justify-self: center;
 }
 
+.home__data{
+  line-height: 140%;
+  margin-bottom: 1rem;
+  font-size: 30px;
+  margin-right: 2rem;
+  text-align: right;
+}
+
 .home__title{
   line-height: 140%;
   margin-bottom: 1rem;

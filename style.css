@@ -3,49 +3,51 @@
 /*=============== HOME ===============*/
 /* Target the home section */
 .home {
-  display: flex; /* Make the home section a flexbox for flexible layout */
-  align-items: center; /* Align content vertically within the section */
+  display: flex;
+  align-items: center;
 }
 
 /* Style the container within the home section */
 .home__container {
-  flex: 1; /* Allow the container to grow and fill available space */
+  display: flex; /* Make the container a flexbox as well */
+  flex-direction: row; /* Set the flex direction to row (default) */
 }
 
 /* Style the image */
 .home__img {
-  width: 50%; /* Set the image width to 50% of the container */
-  object-fit: cover; /* Ensure image fills the space while maintaining aspect ratio */
-  order: -1; /* Move the image to the left using the order property */
+  width: 50%;
+  object-fit: cover;
+  order: -1;
 }
 
 /* Style the data container */
 .home__data {
-  text-align: justify; /* Justify text alignment for better readability */
-  padding: 2rem; /* Add some padding for spacing */
-  color: #333; /* Set default text color to dark gray */
+  flex: 1; /* Allow the data container to grow and fill remaining space */
+  text-align: justify;
+  padding: 2rem;
+  color: #333;
 }
 
 /* Style the title with dark green color */
 .home__title {
-  font-size: 2rem; /* Increase font size for title */
-  margin-bottom: 1rem; /* Add some space below the title */
+  font-size: 2rem;
+  margin-bottom: 1rem;
   color: darkgreen;
 }
 
 /* Style the description with bold text */
 .home__description {
-  font-weight: bold; /* Make description text bold */
+  font-weight: bold;
 }
 
 /* Media query for smaller screens (adjust breakpoint as needed) */
 @media (max-width: 768px) {
   .home__img {
-    width: 100%; /* Make image full width on smaller screens */
-    order: initial; /* Reset image order to default stacking on small screens */
+    width: 100%;
+    order: initial;
   }
   .home__data {
-    text-align: center; /* Center text on smaller screens */
+    text-align: center;
   }
 }
 

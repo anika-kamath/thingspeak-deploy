@@ -9,6 +9,13 @@
   min-height: 100vh; /* Set a minimum height for the section to fill the viewport */
 }
 
+.home {
+  display: flex; /* Make the home section a flexbox for flexible layout */
+  justify-content: center; /* Center the content horizontally within the viewport */
+  align-items: center; /* Align content vertically within the section */
+  min-height: 100vh; /* Set a minimum height for the section to fill the viewport */
+}
+
 /* Style the container within the home section */
 .home__container {
   display: flex; /* Make the container a flexbox as well */

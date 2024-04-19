@@ -1,3 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*=============== HOME ===============*/
+.home{
+  padding: 3.5rem 0 2rem;
+}
+
+.home__container{
+  position: relative;
+  row-gap: 2rem;
+}
+
+.home__img{
+  width: 200px;
+  justify-self: center;
+}
+
+.home__title{
+  line-height: 140%;
+  margin-bottom: 1rem;
+}
+
+.home__description{
+  margin-bottom: 2.5rem;
+}
+
+
+/*-body-*/
 body {
     font-family: sans-serif;
     background-color: #f0fff0;

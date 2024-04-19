@@ -18,9 +18,9 @@
 
 /* Style the image */
 .home__img {
-  width: 50%; /* Set the image to half the container width */
+  width: 30%; /* Set the image to half the container width */
   object-fit: cover; /* Ensure image fills the space while maintaining aspect ratio */
-  margin: 0 auto; /* Center the image horizontally within the container (optional) */
+  margin: auto; /* Center the image horizontally within the container (optional) */
   border-radius: 10px; /* Add a slight border radius for a softer look (optional) */
 }
 
@@ -33,7 +33,7 @@
 
 /* Style the title with dark green color */
 .home__title {
-  font-size: 2rem; /* Increase font size for title */
+  font-size: 5rem; /* Increase font size for title */
   margin-bottom: 1rem; /* Add some space below the title */
   color: darkgreen;
 }
@@ -41,6 +41,7 @@
 /* Style the description with bold text */
 .home__description {
   font-weight: bold; /* Make description text bold */
+  font-size: 2rem;
 }
 
 /* Media query for smaller screens (adjust breakpoint as needed) */

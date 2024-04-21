@@ -19,14 +19,6 @@ document.getElementById('upload').addEventListener('change', function(event) {
     reader.readAsDataURL(event.target.files[0]);
 });
 
-// script.js
-function processMultipleImages() {
-    processImage('test1.png', 'op1.png');
-    processImage('test2.png', 'op2.png');
-    processImage('test3.png', 'op3.png');
-    processImage('test4.png', 'op4.png');
-}
-
 function processImage(testImageName, outputImageName) {
     // Display specific images
     const leftColumn = document.getElementById('left-column');

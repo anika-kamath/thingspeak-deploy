@@ -113,6 +113,19 @@ h1, h2 {
   padding: 20px;
 }
 
+
+
+/*--new--*/
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .upload-section, .output-section {
   flex: 1;
   text-align: center;
@@ -139,4 +152,5 @@ h1, h2 {
   max-height: 300px;
   object-fit: cover;
 }
+
 

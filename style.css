@@ -101,3 +101,42 @@ h1, h2 {
 .iframe-container iframe {
   margin: 10px; /* Add spacing between iframes */
 }
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.upload-section, .output-section {
+  flex: 1;
+  text-align: center;
+}
+
+#upload1 {
+  display: none;
+}
+
+#submit-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#submit-button:hover {
+  background-color: #3e8e41;
+}
+
+#output-image {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+

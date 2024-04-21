@@ -4,19 +4,57 @@ const submitButton = document.getElementById('submit-button');
 const channelId = "2191567"; // Replace with your ThingSpeak channel ID
 const apiReadKey = "BU9640W3HOS6KPQT"; // Replace with your ThingSpeak Read API Key
 
-submitButton.addEventListener('click', () => {
-  const uploadedFile = uploadInput.files[0];
-  if (uploadedFile) {
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      outputImage.src = event.target.result;
+// script.js
+document.getElementById('upload').addEventListener('change', function(event) {
+    let reader = new FileReader();
+    reader.onload = function() {
+        let imgElement = document.createElement('img');
+        imgElement.src = reader.result;
+        imgElement.style.maxWidth = '100%';
+        imgElement.style.maxHeight = '100%';
+        document.getElementById('left-column').innerHTML = ''; // Clear previous images
+        document.getElementById('left-column').appendChild(imgElement);
     };
-    reader.readAsDataURL(uploadedFile);
-  } else {
-    // Handle case where no file is uploaded
-    alert('Please select an image to upload.');
-  }
+    reader.readAsDataURL(event.target.files[0]);
 });
+
+function processImage(testImageName, outputImageName) {
+    // Display specific images
+    const leftColumn = document.getElementById('left-column');
+    const rightColumn = document.getElementById('right-column');
+    leftColumn.innerHTML = ''; // Clear previous images
+    rightColumn.innerHTML = ''; // Clear previous images
+    
+    // Display test image in the left column
+    let testImage = document.createElement('img');
+    testImage.src = testImageName;
+    testImage.style.maxWidth = '100%';
+    testImage.style.maxHeight = '100%';
+    leftColumn.appendChild(testImage);
+
+    // Display output image in the right column
+    let outputImage = document.createElement('img');
+    outputImage.src = outputImageName;
+    outputImage.style.maxWidth = '100%';
+    outputImage.style.maxHeight = '100%';
+    rightColumn.appendChild(outputImage);
+}
+
+
+
+// submitButton.addEventListener('click', () => {
+//   const uploadedFile = uploadInput.files[0];
+//   if (uploadedFile) {
+//     const reader = new FileReader();
+//     reader.onload = (event) => {
+//       outputImage.src = event.target.result;
+//     };
+//     reader.readAsDataURL(uploadedFile);
+//   } else {
+//     // Handle case where no file is uploaded
+//     alert('Please select an image to upload.');
+//   }
+// });
 
 
 // function getData() {

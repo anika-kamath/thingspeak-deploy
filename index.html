@@ -63,19 +63,18 @@
   </main>
 
     <!--==================== upload====================-->
-
-  <div class="container">
-    <div class="upload-section">
-      <h2>Upload Image</h2>
-      <input type="file" id="upload1" accept="image/*" />
-      <label for="upload1">Choose File</label>
+<div class="container">
+    <div class="column" id="left-column">
+        <!-- Area to display the uploaded image -->
     </div>
-    <div class="output-section">
-      <h2>Output Image</h2>
-      <img id="output-image" src="" alt="Output Image">
+    <div class="column" id="right-column">
+        <!-- Area to display the output image after submit -->
     </div>
-    <button id="submit-button">Submit</button>
-  </div>
+</div>
+<div class="buttons">
+    <input type="file" id="upload" accept="image/*">
+    <button onclick="processImage()">Submit</button>
+</div>
 
   <script>
     getData(); // Call the function to retrieve sensor data

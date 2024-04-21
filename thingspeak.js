@@ -15,26 +15,17 @@ document.getElementById('upload').addEventListener('change', function(event) {
         imgElement.style.maxHeight = '100%';
         document.getElementById('left-column').innerHTML = ''; // Clear previous images
         document.getElementById('left-column').appendChild(imgElement);
-        
-        // Determine the corresponding output image name based on the uploaded image
-        let uploadedImageName = event.target.files[0].name;
-        let outputImageName;
-        if (uploadedImageName === 'test1.png') {
-            outputImageName = 'op1.png';
-        } else if (uploadedImageName === 'test2.png') {
-            outputImageName = 'op2.png';
-        } else if (uploadedImageName === 'test3.png') {
-            outputImageName = 'op3.png';
-        }
-        } else if (uploadedImageName === 'test4.png') {
-            outputImageName = 'op4.png';
-        }// Add more conditions for additional images if needed
-        
-        // Call processImage with the corresponding output image name
-        processImage(uploadedImageName, outputImageName);
     };
     reader.readAsDataURL(event.target.files[0]);
 });
+
+// script.js
+function processMultipleImages() {
+    processImage('test1.png', 'op1.png');
+    processImage('test2.png', 'op2.png');
+    processImage('test3.png', 'op3.png');
+    processImage('test4.png', 'op4.png');
+}
 
 function processImage(testImageName, outputImageName) {
     // Display specific images
@@ -57,7 +48,6 @@ function processImage(testImageName, outputImageName) {
     outputImage.style.maxHeight = '100%';
     rightColumn.appendChild(outputImage);
 }
-
 
 
 
